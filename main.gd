@@ -1,6 +1,5 @@
 extends Control
 
-
 var player1_time = 300  # 5 minutes in seconds
 var player2_time = 300
 var current_player = 0
@@ -49,11 +48,7 @@ func format_time(time):
 	var minutes = int(time / 60)
 	var seconds = int(time) % 60
 	return str(minutes).pad_zeros(2) + ":" + str(seconds).pad_zeros(2)
-	
 
 func update_display():
 	$Player1_time.text = format_time(player1_time)
 	$Player2_time.text = format_time(player2_time)
-
-
-	
