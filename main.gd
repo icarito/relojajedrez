@@ -30,6 +30,10 @@ func _input(event):
 	if event.is_action_pressed("Cambio"):
 		_on_space_pressed()
 
+func _gui_input(event):
+	if event is InputEventScreenTouch and event.pressed:
+		_on_space_pressed()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if timer_running:
